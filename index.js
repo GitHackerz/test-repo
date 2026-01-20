@@ -3,8 +3,8 @@ const fs = require('fs');
 const input = fs.readFileSync(0, 'utf-8').trim();
 
 // Log what we received
-console.log("This is a test repository.");
-console.log("Input received:", input);
+console.debug("This is a test repository.");
+console.debug("Input received:", input);
 
 // Process the input - detect if it contains secrets
 if (input.includes('AWS_SECRET') || input.includes('AKIA')) {
@@ -14,4 +14,4 @@ if (input.includes('AWS_SECRET') || input.includes('AKIA')) {
 }
 
 // Echo the input back
-console.log(input);
+console.debug(input);
